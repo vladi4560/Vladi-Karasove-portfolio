@@ -14,6 +14,7 @@ export default function Footer() {
       }}
     >
       <div
+        className="footer-inner"
         style={{
           maxWidth: '1200px',
           margin: '0 auto',
@@ -30,7 +31,7 @@ export default function Footer() {
         </div>
 
         <p style={{ margin: 0, color: 'var(--text-muted)', fontSize: '0.82rem', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
-          Built with <Heart size={12} color="var(--accent-gold)" fill="var(--accent-gold)" /> using React &amp; Tailwind CSS
+          Built with <Heart size={12} color="var(--accent-purple)" fill="var(--accent-purple)" /> using React &amp; Tailwind CSS
         </p>
 
         <p style={{ margin: 0, color: 'var(--text-muted)', fontSize: '0.82rem' }}>

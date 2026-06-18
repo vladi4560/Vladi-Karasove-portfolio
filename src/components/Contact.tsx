@@ -1,4 +1,4 @@
-import { Mail, Send } from 'lucide-react';
+import { Mail, Send, MapPin } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './Icons';
 import { profile } from '../data/profile';
 
@@ -6,10 +6,14 @@ export default function Contact() {
   return (
     <section
       id="contact"
+      className="section-pad"
       style={{
         background: 'var(--bg-card)',
         borderTop: '1px solid var(--border-card)',
-        padding: '5rem 1.5rem',
+        paddingLeft: '1.5rem',
+        paddingRight: '1.5rem',
+        paddingTop: '5rem',
+        paddingBottom: '5rem',
       }}
     >
       <div style={{ maxWidth: '640px', margin: '0 auto', textAlign: 'center' }}>
@@ -22,9 +26,15 @@ export default function Contact() {
           Feel free to reach out — I'll do my best to reply promptly.
         </p>
 
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.4rem', marginTop: '0.75rem', color: 'var(--text-muted)', fontSize: '0.85rem' }}>
+          <MapPin size={14} color="var(--accent-purple)" />
+          {profile.location}
+        </div>
+
         {/* Email CTA */}
         <a
           href={`mailto:${profile.email}`}
+          className="contact-cta"
           style={{
             display: 'inline-flex',
             alignItems: 'center',
@@ -38,7 +48,7 @@ export default function Contact() {
             fontSize: '1rem',
             textDecoration: 'none',
             transition: 'opacity 0.15s, transform 0.15s',
-            boxShadow: '0 4px 16px rgba(59,130,246,0.25)',
+            boxShadow: '0 4px 16px rgba(59,130,246,0.2)',
           }}
           onMouseEnter={(e) => { e.currentTarget.style.opacity = '0.85'; e.currentTarget.style.transform = 'translateY(-1px)'; }}
           onMouseLeave={(e) => { e.currentTarget.style.opacity = '1'; e.currentTarget.style.transform = ''; }}

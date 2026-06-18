@@ -5,10 +5,12 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import LightningEffect from './components/LightningEffect';
 
 export default function App() {
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      <LightningEffect />
       <Navbar />
       <main style={{ flex: 1 }}>
         <Hero />

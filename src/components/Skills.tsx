@@ -5,11 +5,15 @@ export default function Skills() {
   return (
     <section
       id="skills"
+      className="section-pad"
       style={{
         background: 'var(--bg-card)',
         borderTop: '1px solid var(--border-card)',
         borderBottom: '1px solid var(--border-card)',
-        padding: '5rem 1.5rem',
+        paddingLeft: '1.5rem',
+        paddingRight: '1.5rem',
+        paddingTop: '5rem',
+        paddingBottom: '5rem',
       }}
     >
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>

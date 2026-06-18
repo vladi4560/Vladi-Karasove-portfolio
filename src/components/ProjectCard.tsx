@@ -23,7 +23,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           style={{
             borderRadius: '0.5rem',
             aspectRatio: '16/9',
-            background: 'linear-gradient(135deg, rgba(59,130,246,0.08) 0%, rgba(245,185,66,0.06) 100%)',
+            background: 'linear-gradient(135deg, rgba(59,130,246,0.08) 0%, rgba(139,92,246,0.07) 100%)',
             border: '1px solid var(--border-card)',
             display: 'flex',
             alignItems: 'center',

@@ -9,35 +9,57 @@ export interface Project {
   featured?: boolean;
 }
 
+// Uncomment each import once you drop the file into src/assets/projects/
+// import snapgramImg from '../assets/projects/snapgram.png';
+// import smartravelImg from '../assets/projects/smartravel.png';
+// import twitterIosImg from '../assets/projects/twitter-ios.png';
+// import legendTalesImg from '../assets/projects/legend-tales.png';
+// import onepiecetokenImg from '../assets/projects/onepiecetoken.png';
+
 export const projects: Project[] = [
   {
-    id: 'project-1',
-    title: '[PROJECT ONE TITLE]',
-    description: '[PLACEHOLDER] A full-featured web application built with modern tooling. Handles authentication, real-time updates, and a clean responsive UI.',
+    id: 'onepiecetoken',
+    title: 'One Piece Token',
+    description: 'Open-source TypeScript & Node.js library that reduces Anthropic Claude API costs by up to 49%. Treats your codebase as a dependency graph using AST parsing — finds exactly the files Claude needs per task instead of dumping everything into context. Compresses conversation history, ranks files by relevance, enforces token budgets, and suppresses verbose output.',
     image: undefined,
-    githubUrl: 'https://github.com/[YOUR GITHUB USERNAME]/[REPO]',
-    liveUrl: undefined,
-    techStack: ['React', 'TypeScript', 'Node.js', 'PostgreSQL'],
+    githubUrl: 'https://github.com/vladi4560/onepiecetoken',
+    techStack: ['TypeScript', 'Node.js', 'AST Parsing', 'Anthropic API'],
     featured: true,
   },
   {
-    id: 'project-2',
-    title: '[PROJECT TWO TITLE]',
-    description: '[PLACEHOLDER] A REST API service with role-based access control, integrated with third-party services, and deployed on AWS.',
+    id: 'snapgram',
+    title: 'SnapGram',
+    description: 'A full-stack Instagram-inspired social media app — photo sharing, likes, follows, and an explore feed, built with a modern TypeScript front-end.',
     image: undefined,
-    githubUrl: 'https://github.com/[YOUR GITHUB USERNAME]/[REPO]',
-    liveUrl: undefined,
-    techStack: ['Node.js', 'Express', 'MongoDB', 'Docker'],
+    githubUrl: 'https://github.com/vladi4560/SnapGram',
+    techStack: ['TypeScript', 'React', 'Tailwind CSS'],
     featured: true,
   },
   {
-    id: 'project-3',
-    title: '[PROJECT THREE TITLE]',
-    description: '[PLACEHOLDER] An open-source CLI tool that automates repetitive development tasks and integrates with popular workflows.',
+    id: 'smartravel',
+    title: 'SmarTravel',
+    description: 'A smart travel planning client app for Android — helps users discover destinations, plan itineraries, and manage trip details on the go.',
     image: undefined,
-    githubUrl: 'https://github.com/[YOUR GITHUB USERNAME]/[REPO]',
-    liveUrl: undefined,
-    techStack: ['TypeScript', 'Node.js', 'Shell'],
+    githubUrl: 'https://github.com/vladi4560/SmarTravel-Client',
+    techStack: ['Java', 'Android', 'Kotlin'],
+    featured: true,
+  },
+  {
+    id: 'twitter-ios',
+    title: 'Twitter iOS',
+    description: 'A native iOS Twitter clone — tweet feed, user profiles, likes, and real-time updates built with Swift and UIKit.',
+    image: undefined,
+    githubUrl: 'https://github.com/vladi4560/Twitter_IOS',
+    techStack: ['Swift', 'UIKit', 'iOS'],
+    featured: true,
+  },
+  {
+    id: 'legend-tales',
+    title: 'Legend Tales',
+    description: 'A C# / Unity RPG game — legend-driven quests, character progression, and narrative-focused adventure mechanics.',
+    image: undefined,
+    githubUrl: 'https://github.com/vladi4560/Legend_Tales',
+    techStack: ['C#', 'Unity'],
     featured: true,
   },
 ];

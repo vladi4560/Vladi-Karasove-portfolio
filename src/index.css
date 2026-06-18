@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --bg-base: #0d0e14;
-  --bg-card: #161821;
-  --bg-card-hover: #1c1f2e;
-  --border-card: #252838;
+  --bg-base: #0a0a12;
+  --bg-card: #12121e;
+  --bg-card-hover: #191926;
+  --border-card: #1e1e32;
   --accent-blue: #3b82f6;
   --accent-blue-light: #60a5fa;
-  --accent-gold: #f5b942;
-  --accent-gold-light: #fcd06a;
-  --text-primary: #e2e8f0;
-  --text-muted: #94a3b8;
+  --accent-purple: #8b5cf6;
+  --accent-purple-light: #a78bfa;
+  --text-primary: #c8c9d4;
+  --text-muted: #6b6c80;
 }
 
 html {
@@ -31,12 +31,12 @@ body {
 ::-webkit-scrollbar-thumb:hover { background: var(--accent-blue); }
 
 ::selection {
-  background: rgba(59, 130, 246, 0.3);
+  background: rgba(139, 92, 246, 0.3);
   color: var(--text-primary);
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, var(--accent-blue), var(--accent-gold));
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -46,12 +46,11 @@ body {
   background: var(--bg-card);
   border: 1px solid var(--border-card);
   border-radius: 0.75rem;
-  transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 .card:hover {
   background: var(--bg-card-hover);
-  border-color: rgba(59, 130, 246, 0.4);
-  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.12);
+  border-color: rgba(139, 92, 246, 0.35);
   transform: translateY(-2px);
 }
 
@@ -70,23 +69,23 @@ body {
   left: 0;
   width: 2.5rem;
   height: 3px;
-  background: linear-gradient(90deg, var(--accent-blue), var(--accent-gold));
+  background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
   border-radius: 2px;
 }
 
 .skill-tag {
   display: inline-block;
-  background: rgba(245, 185, 66, 0.1);
-  color: var(--accent-gold);
-  border: 1px solid rgba(245, 185, 66, 0.25);
+  background: rgba(139, 92, 246, 0.1);
+  color: var(--accent-purple-light);
+  border: 1px solid rgba(139, 92, 246, 0.25);
   border-radius: 9999px;
   padding: 0.2em 0.75em;
   transition: background 0.15s, border-color 0.15s, transform 0.15s;
   cursor: default;
 }
 .skill-tag:hover {
-  background: rgba(245, 185, 66, 0.2);
-  border-color: var(--accent-gold);
+  background: rgba(139, 92, 246, 0.2);
+  border-color: var(--accent-purple);
   transform: translateY(-1px);
 }
 
@@ -94,7 +93,7 @@ body {
   display: inline-block;
   background: rgba(59, 130, 246, 0.1);
   color: var(--accent-blue-light);
-  border: 1px solid rgba(59, 130, 246, 0.25);
+  border: 1px solid rgba(59, 130, 246, 0.2);
   border-radius: 9999px;
   font-size: 0.7rem;
   padding: 0.15em 0.6em;
@@ -115,19 +114,19 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--accent-blue);
+  background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
   transition: width 0.2s;
 }
-.nav-link:hover { color: var(--accent-blue-light); }
+.nav-link:hover { color: var(--accent-purple-light); }
 .nav-link:hover::after { width: 100%; }
 
 .badge {
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
-  background: rgba(59, 130, 246, 0.12);
-  color: var(--accent-blue-light);
-  border: 1px solid rgba(59, 130, 246, 0.3);
+  background: rgba(139, 92, 246, 0.12);
+  color: var(--accent-purple-light);
+  border: 1px solid rgba(139, 92, 246, 0.3);
   border-radius: 9999px;
   padding: 0.3em 0.85em;
   font-size: 0.8rem;
@@ -145,7 +144,7 @@ body {
 }
 
 .dot-grid {
-  background-image: radial-gradient(rgba(59, 130, 246, 0.12) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px);
   background-size: 28px 28px;
 }
 
@@ -163,4 +162,45 @@ body {
 }
 .fade-in-up {
   animation: fadeInUp 0.6s ease forwards;
+}
+
+/* ── Mobile responsive ─────────────────────────────────── */
+@media (max-width: 640px) {
+  /* Tighter section padding on phones */
+  .section-pad {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  /* About: bio + stats stack vertically (already default), reduce gap */
+  #about-grid {
+    gap: 2rem !important;
+  }
+
+  /* Footer: center all three items when they wrap */
+  .footer-inner {
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  /* Contact email button: full width so it never clips */
+  .contact-cta {
+    width: 100%;
+    justify-content: center !important;
+    box-sizing: border-box;
+    font-size: 0.9rem !important;
+    padding: 0.75rem 1rem !important;
+  }
+
+  /* Hero: keep scroll hint visible with enough clearance */
+  .hero-inner {
+    padding-bottom: 5rem !important;
+  }
+}
+
+/* About: two-column layout on tablet/desktop */
+@media (min-width: 768px) {
+  #about-grid {
+    grid-template-columns: 1.2fr 1fr !important;
+  }
 }
