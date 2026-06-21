@@ -18,7 +18,7 @@ export const profile = {
     'Node.js & PostgreSQL',
     'React Native & Expo',
     'API & Schema Design',
-    'Braze & Marketing Tech',
+    'Braze Architect & Marketing Tech',
     'B.Sc. Software Engineering',
   ],
 };
